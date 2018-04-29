@@ -112,7 +112,7 @@ def get_word_score(word, n):
     return word_score
 
 
-# print(get_word_score("apple", 8))
+print(get_word_score("apple", 8))
 #
 # Make sure you understand how this function works and what it does!
 #
@@ -187,46 +187,8 @@ def update_hand(hand, word):
     returns: dictionary (string -> int)
     """
 
-    words_list = load_words()
+    pass  # TO DO... Remove this line when you implement this function
 
-    # Clone of hand created to deal with valid words
-    new_hand = hand.copy()
-    # Clone of hand created to deal with values > 1
-    test_hand = hand.copy()
-
-    # Tests for minimum letter count, x = 0 ; test failed
-    x = 1
-    for letter in word:
-        if test_hand[letter] > 0:
-            test_hand[letter] -= 1
-        else:
-            x = 0
-            break
-        # print("test hand =", test_hand)
-
-
-    # print("x =", x)
-    # print("new hand =", new_hand)
-
-    # Tests for valid word and penalises by removing letters from original hand
-    if x == 0 or word not in words_list:
-        for letter in word:
-            if letter in hand and hand[letter] > 0:
-                hand[letter] -= 1
-        # print("hand =")
-        return hand
-
-    # Displays new_hand after a valid word was input
-    else:
-        for letter in word:
-            if letter in new_hand:
-                new_hand[letter] -= 1
-        # print("hand = ", hand)
-        # print("new_hand = ")
-        return new_hand
-
-
-# print(update_hand({"a":1, "p":2, "l":1, "c":4, "x":2, "e":1}, "apple"))
 #
 # Problem #3: Test word validity
 #
@@ -242,22 +204,8 @@ def is_valid_word(word, hand, word_list):
     returns: boolean
     """
 
-    word_list = load_words()
-    test_hand = hand.copy()
-    x = 1
-    for letter in word:
-        if test_hand[letter] > 0:
-            test_hand[letter] -= 1
-        else:
-            x = 0
-            break
+    pass  # TO DO... Remove this line when you implement this function
 
-    if x == 0 or word not in word_list:
-        return False
-    else:
-        return True
-
-# print(is_valid_word("apple", {"a":1, "p":2, "l":0, "e":1}))
 #
 # Problem #5: Playing a hand
 #
