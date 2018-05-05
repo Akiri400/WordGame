@@ -94,25 +94,22 @@ def get_word_score(word, n):
     """
     lower_word = word.lower()
     comp1 = 0
-    comp2 = 0
     
     for char in lower_word:
         comp1 += int(SCRABBLE_LETTER_VALUES[char])
-    print(comp1)
     
     word_length = (len(lower_word))
     comp2 = 7 * word_length - 3 * (n-word_length)
     
     if comp2 < 1:
         comp2 = 1
-    print(comp2)
     
     word_score = comp1 * comp2
     
     return word_score
 
 
-print(get_word_score("apple", 8))
+# print(get_word_score("apple", 8))
 #
 # Make sure you understand how this function works and what it does!
 #
